@@ -35,4 +35,6 @@ Streamify is a full-stack video streaming web application similar to YouTube, wh
 
 ---
 
+REACT_APP_API_URL=https://video-streaming-wenr.onrender.com
+
 ## 📂 Project Structure

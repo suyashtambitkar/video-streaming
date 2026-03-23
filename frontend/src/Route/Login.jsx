@@ -35,22 +35,28 @@ const Login = () => {
           <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="border border-[#4e4e53] text-base w-full bg-black outline-none px-2 py-1" />
         </div>
 
-        <div className="w-full mb-8">
-          <h3 className="w-full text-sm mb-2">Password</h3>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border border-[#4e4e53] text-base w-full bg-black outline-none px-2 py-1" />
-        </div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();   // stop page reload
+            makeRequst();         // call submit function
+          }}
+        >
+          <div className="w-full mb-8">
+            <h3 className="w-full text-sm mb-2">Password</h3>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border border-[#4e4e53] text-base w-full bg-black outline-none px-2 py-1" />
+          </div>
 
-        <div className="mb-7">
-          <button onClick={()=>makeRequst()} className="w-full py-1  bg-[#4a57bf] hover:bg-[#3f4ebe]">Submit</button>
-        </div>
-
+          <div className="mb-7">
+            <button onClick={() => makeRequst()} className="w-full py-1  bg-[#4a57bf] hover:bg-[#3f4ebe]">Submit</button>
+          </div>
+        </form>
         <div>
           <h3 className="text-xs text-[#909297]">Create An <Link to={"/registration"} className='text-[#7581df]'>Account</Link></h3>
         </div>
 
       </div>
 
-    </div>
+    </div >
   )
 }
 
