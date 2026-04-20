@@ -7,6 +7,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const makeRequst = async () => {
@@ -47,7 +48,13 @@ const Login = () => {
           </div>
 
           <div className="mb-7">
-            <button onClick={() => makeRequst()} className="w-full py-1  bg-[#4a57bf] hover:bg-[#3f4ebe]">Submit</button>
+            <button
+              type="submit"
+              className="w-full py-1 bg-[#4a57bf] hover:bg-[#3f4ebe]"
+              disabled={loading}
+            >
+              {loading ? "Wait..." : "Submit"}
+            </button>
           </div>
         </form>
         <div>
