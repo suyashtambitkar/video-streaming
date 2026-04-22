@@ -11,7 +11,6 @@ const Home = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       const getAllVideos = await makeAuthGetRequest(`${API_URL}/video/getAllVideos`);
-
       setAllVideos(getAllVideos);
     };
 

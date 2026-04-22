@@ -8,7 +8,7 @@ const Video = require("../Models/Video");
 
 
 // get current user
-router.get("/user",jwtVerify,async (req,res) =>{
+router.get("/user", jwtVerify, async (req, res) => {
    const userId = req.user;
    const getUser = await User.findById(userId);
    return res.status(201).json(getUser);
@@ -30,8 +30,15 @@ router.post("/uploadVideo", jwtVerify, async (req, res) => {
 
 // Get All Videos
 router.get("/getAllVideos", jwtVerify, async (req, res) => {
-   const allVideos = await video.find().populate("Artist");
-   return res.status(201).json(allVideos);
+   
+   const allVideos = await video.aggregate([
+      { $sample: { size: 50 } } // shuffle ALL videos
+    ]);
+
+    const populatedVideos = await video.populate(allVideos, {
+      path: "Artist",
+    });
+   return res.status(201).json(populatedVideos);
 });
 
 // get play video
@@ -68,7 +75,7 @@ router.get("/profile", jwtVerify, async (req, res) => {
    }
    return res.status(201).json(user);
 })
- 
+
 // get owned video
 router.get("/myVideos", jwtVerify, async (req, res) => {
    const ArtistId = req.user;
@@ -111,7 +118,7 @@ router.post("/saveVideo/:videoId", jwtVerify, async (req, res) => {
 // Get saved videos
 router.get("/savedVideos", jwtVerify, async (req, res) => {
    const userId = req.user;
-   const user = await User.findById(userId).populate({path: "SavedVideos",populate: {path:"Artist"}});
+   const user = await User.findById(userId).populate({ path: "SavedVideos", populate: { path: "Artist" } });
    if (!user) {
       return res.status(404).json({ err: "User not found" });
    }
