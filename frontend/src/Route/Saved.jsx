@@ -25,7 +25,7 @@ const Saved = () => {
                     {
                         showVideo && showVideo.length > 0 ? (
                             showVideo.map((video) => (
-                                <div key={video._id} onClick={async()=>navigate(`/video/${video._id}`)} className="flex flex-row items-center gap-3 border border-[#494b4e] hover:border-[#7f7f8a] hover:bg-[#0b0b0b] rounded-md p-2 mb-4 cursor-pointer">
+                                <div key={video._id} onClick={async()=>navigate(`/fdfdvideodfdfd/${video._id}`)} className="flex flex-row items-center gap-3 border border-[#494b4e] hover:border-[#7f7f8a] hover:bg-[#0b0b0b] rounded-md p-2 mb-4 cursor-pointer">
                                     <div className=" h-[100px] w-[35%] md:w-[18%]">
                                         <img src={video.Thumbnail} alt="/" className="h-full w-full object-contain" />
                                     </div>

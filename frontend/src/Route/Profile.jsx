@@ -45,7 +45,7 @@ const Profile = () => {
 
                     {/* Video Upload botton */}
                     <div className="h-[10%] pl-2">
-                        <Link to={"/upload"} className="border border-[#252525] hover:border-[#565555] text-[12px] md:text-sm px-2 md:px-4 py-1 bg-[#212020] hover:bg-[#302f2f]">Upload Video +</Link>
+                        <Link to={"/dduploadsfsfsd"} className="border border-[#252525] hover:border-[#565555] text-[12px] md:text-sm px-2 md:px-4 py-1 bg-[#212020] hover:bg-[#302f2f]">Upload Video +</Link>
                     </div>
 
                     {/* All videos */}
@@ -53,7 +53,7 @@ const Profile = () => {
                         {
                             ownVideos && ownVideos.length > 0 ? (
                                 ownVideos.map((video) => (
-                                    <div key={video._id} onClick={async () => navigate(`/video/${video._id}`)} className="flex flex-row items-center gap-3 border border-[#494b4e] hover:border-[#7f7f8a] hover:bg-[#0b0b0b] rounded-md p1 md:p-2 mb-4 cursor-pointer">
+                                    <div key={video._id} onClick={async () => navigate(`/fdfdvideodfdfd/${video._id}`)} className="flex flex-row items-center gap-3 border border-[#494b4e] hover:border-[#7f7f8a] hover:bg-[#0b0b0b] rounded-md p1 md:p-2 mb-4 cursor-pointer">
                                         <div className=" h-[80px] md:h-[100px] w-[35%] md:w-[18%]">
                                             <img src={video.Thumbnail} alt={video.Title} className="h-full w-full object-contain" />
                                         </div>

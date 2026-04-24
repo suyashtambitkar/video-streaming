@@ -1,5 +1,5 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./Request Handler/AuthContext";
 import Login from "./Route/Login";
 import Registration from "./Route/Registration";
 import Home from "./Route/Home";
@@ -11,22 +11,21 @@ import SearchResult from "./Route/SearchResult";
 
 
 function App() {
+  
   return (
     <div>
-      <AuthProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/upload" element={<UploadVideo />} />
-            <Route path="/video/:id" element={<Videoplay />} />
-            <Route path="/saved" element={<Saved />} />
+            <Route path="/shjkjrjdhomefdf" element={<Home />} />
+            <Route path="/sdfdsprofilefdfe" element={<Profile />} />
+            <Route path="/dduploadsfsfsd" element={<UploadVideo />} />
+            <Route path="/fdfdvideodfdfd/:id" element={<Videoplay />} />
+            <Route path="/fdfdsavedfddsd" element={<Saved />} />
             <Route path="/search/:videoSearch" element={<SearchResult />} />
           </Routes>
         </BrowserRouter>
-      </AuthProvider>
     </div>
   );
 }

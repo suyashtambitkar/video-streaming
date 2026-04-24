@@ -24,7 +24,7 @@ const Home = () => {
         {
           allVideos && allVideos.length > 0 ? (
             allVideos.map((video) => (
-              <div key={video._id} onClick={async () => navigate(`/video/${video._id}`)} className="border border-transparent hover:border hover:border-[#2e2f30] cursor-pointer">
+              <div key={video._id} onClick={async () => navigate(`/fdfdvideodfdfd/${video._id}`)} className="border border-transparent hover:border hover:border-[#2e2f30] cursor-pointer">
                 <div className="h-[200px] bg-black my-3">
                   <img src={video.Thumbnail} className="h-full w-full object-cover" alt="/" />
                 </div>

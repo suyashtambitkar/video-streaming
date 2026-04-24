@@ -35,7 +35,7 @@ const Generalised = ({ children }) => {
           <div onClick={async () => navigate(`/search/${videoSearch}`)} className="px-3 py-2 rounded-r-full flex items-center bg-[#1e1e1f] border border-[#4e4e53] cursor-pointer "><IoSearch className="text-base" /></div>
         </div>
 
-        <div className="hidden md:flex items-center"><CgProfile onClick={() => navigate("/profile")} className="text-xl md:text-2xl cursor-pointer text-[#a0a0a6]" /></div>
+        <div className="hidden md:flex items-center"><CgProfile onClick={() => navigate("/sdfdsprofilefdfe")} className="text-xl md:text-2xl cursor-pointer text-[#a0a0a6]" /></div>
 
         <div className="flex md:hidden"><FaBars onClick={() => setShow(!show)} className="text-xl cursor-pointer" /></div>
       </nav>
@@ -59,9 +59,9 @@ const Generalised = ({ children }) => {
         {/* Side-bar */}
         <div className="h-full hidden md:flex w-[20%] px-4 py-2">
           <ul className="w-full">
-            <Link to={"/home"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><TiHomeOutline className="text-xl" />Home</Link>
-            <Link to={"/profile"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><IoCloudUploadSharp className="text-xl" />Uploads</Link>
-            <Link to={"/saved"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><MdOutlineSaveAlt className="text-xl" />Saved</Link>
+            <Link to={"/shjkjrjdhomefdf"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><TiHomeOutline className="text-xl" />Home</Link>
+            <Link to={"/sdfdsprofilefdfe"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><IoCloudUploadSharp className="text-xl" />Uploads</Link>
+            <Link to={"/fdfdsavedfddsd"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><MdOutlineSaveAlt className="text-xl" />Saved</Link>
             <Link to={"/"} className="flex items-center gap-3 px-3 py-3 mt-3 border border-[#4e4e53] hover:border-[#a6a6b3] cursor-pointer"><CiLogout className="text-xl" />Logout</Link>
           </ul>
         </div>

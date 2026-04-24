@@ -95,7 +95,7 @@ const Videoplay1 = () => {
           {
             playVideo?.relatedVideos && playVideo?.relatedVideos?.length > 0 ? (
               playVideo?.relatedVideos?.map((video) => (
-                <div key={video._id} onClick={async () => navigate(`/video/${video._id}`)} className="w-full flex items-center  gap-3 p-1 mb-2 cursor-pointer border border-[#494b4e] hover:border-[#7f7f8a] hover:bg-[#0b0b0b]">
+                <div key={video._id} onClick={async () => navigate(`/fdfdvideodfdfd/${video._id}`)} className="w-full flex items-center  gap-3 p-1 mb-2 cursor-pointer border border-[#494b4e] hover:border-[#7f7f8a] hover:bg-[#0b0b0b]">
                   <img className="w-16 aspect-square object-contain" src={video.Thumbnail} alt="/" />
 
                   <div className="w-full overflow-hidden">

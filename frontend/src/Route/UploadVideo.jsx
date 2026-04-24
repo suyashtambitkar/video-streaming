@@ -52,7 +52,7 @@ const UploadVideo = () => {
       console.log(res.err);
       return
     }
-    navigate("/profile");
+    navigate("/sdfdsprofilefdfe");
   }
 
   //Cancle button handle

@@ -15,13 +15,14 @@ const Login = () => {
       console.log("empty field");
       return;
     }
+    setLoading(true);
     const data = { Email: email, Password: password };
     const res = await makeUnAuthRequest(`${API_URL}/auth/login`, data);
     if (res && res.err) {
       console.log("faild to login");
       return
     }
-    navigate("/home");
+    navigate("/shjkjrjdhomefdf");
   }
 
   return (
