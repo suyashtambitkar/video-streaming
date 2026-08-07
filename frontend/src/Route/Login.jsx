@@ -19,8 +19,9 @@ const Login = () => {
     const data = { Email: email, Password: password };
     const res = await makeUnAuthRequest(`${API_URL}/auth/login`, data);
     if (res && res.err) {
-      console.log("faild to login");
-      return
+      alert(res.err);
+      setLoading(false)
+      return;
     }
     navigate("/shjkjrjdhomefdf");
   }
@@ -60,6 +61,7 @@ const Login = () => {
         </form>
         <div>
           <h3 className="text-xs text-[#909297]">Create An <Link to={"/registration"} className='text-[#7581df]'>Account</Link></h3>
+          <div><span className="text-xs text-[#909297]">[ demo :- suyash@gmail.com,    password ]</span></div>
         </div>
 
       </div>
