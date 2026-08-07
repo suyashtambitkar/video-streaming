@@ -9,7 +9,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Profile = () => {
     const [user, setUser] = useState(null);
     const [ownVideos, setOwnVideos] = useState(null);
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchProfile = async () => {

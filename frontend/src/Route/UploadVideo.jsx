@@ -58,7 +58,7 @@ const UploadVideo = () => {
   //Cancle button handle
   const cancle = () => {
 
-    navigate("/profile");
+    navigate("/sdfdsprofilefdfe");
   }
 
   return (
